@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jentry.entry.cli.format &mdash; jentry 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="jentry.entry.cli.order" href="order.html" />
+    <link rel="prev" title="jentry.entry.cli.cli" href="cli.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> jentry
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/installation/index.html">Installation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../config/index.html">jentry.config</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">jentry.entry</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">jentry.entry.cli</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cli.html">jentry.entry.cli.cli</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">jentry.entry.cli.format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#entryformat">EntryFormat</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="order.html">jentry.entry.cli.order</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../script/index.html">jentry.entry.script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../model/index.html">jentry.model</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">jentry</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">jentry.entry</a> &raquo;</li>
+        
+          <li><a href="index.html">jentry.entry.cli</a> &raquo;</li>
+        
+      <li>jentry.entry.cli.format</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api_doc/entry/cli/format.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+    
+    
+  <div class="section" id="module-jentry.entry.cli.format">
+<span id="jentry-entry-cli-format"></span><h1>jentry.entry.cli.format<a class="headerlink" href="#module-jentry.entry.cli.format" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="entryformat">
+<h2>EntryFormat<a class="headerlink" href="#entryformat" title="Permalink to this headline">¶</a></h2>
+<dl class="py class enum">
+<dt id="jentry.entry.cli.format.EntryFormat">
+<em class="property">enum </em><code class="sig-prename descclassname">jentry.entry.cli.format.</code><code class="sig-name descname">EntryFormat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/jentry/entry/cli/format.html#EntryFormat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jentry.entry.cli.format.EntryFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Member Type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+</dl>
+<p>Valid values are as follows:</p>
+<dl class="py attribute">
+<dt id="jentry.entry.cli.format.EntryFormat.TABLE">
+<code class="sig-name descname">TABLE</code><em class="property"> = &lt;EntryFormat.TABLE: 1&gt;</em><a class="headerlink" href="#jentry.entry.cli.format.EntryFormat.TABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print in table format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="jentry.entry.cli.format.EntryFormat.JSON">
+<code class="sig-name descname">JSON</code><em class="property"> = &lt;EntryFormat.JSON: 2&gt;</em><a class="headerlink" href="#jentry.entry.cli.format.EntryFormat.JSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print in pretty JSON format.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="jentry.entry.cli.format.EntryFormat.ENTRY">
+<code class="sig-name descname">ENTRY</code><em class="property"> = &lt;EntryFormat.ENTRY: 3&gt;</em><a class="headerlink" href="#jentry.entry.cli.format.EntryFormat.ENTRY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print in simple java entry format.</p>
+</dd></dl>
+
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code> and its members also have the following methods:</p>
+<dl class="py method">
+<dt id="jentry.entry.cli.format.EntryFormat.print_first_entry">
+<code class="sig-name descname">print_first_entry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entry</span><span class="p">:</span> <span class="n"><a class="reference internal" href="../../model/entry.html#jentry.model.entry.JavaEntry" title="jentry.model.entry.JavaEntry">jentry.model.entry.JavaEntry</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/jentry/entry/cli/format.html#EntryFormat.print_first_entry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jentry.entry.cli.format.EntryFormat.print_first_entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the first given java entry object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entry</strong> – Given java entry object.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Raise <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code> when self is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="jentry.entry.cli.format.EntryFormat.print_entries">
+<code class="sig-name descname">print_entries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">entries</span><span class="p">:</span> <span class="n">List<span class="p">[</span><a class="reference internal" href="../../model/entry.html#jentry.model.entry.JavaEntry" title="jentry.model.entry.JavaEntry">jentry.model.entry.JavaEntry</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/jentry/entry/cli/format.html#EntryFormat.print_entries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jentry.entry.cli.format.EntryFormat.print_entries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the given java entry objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entries</strong> – Given java entries.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Raise <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code> when self is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="order.html" class="btn btn-neutral float-right" title="jentry.entry.cli.order" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cli.html" class="btn btn-neutral float-left" title="jentry.entry.cli.cli" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, HansBug
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: main
+    <span class="fa fa-caret-down"></span>
+  </span>
+        <div class="rst-other-versions">
+                <dl>
+                    <dt>Branches</dt>
+                        <dd><a href="format.html">main</a></dd>
+                </dl>
+        </div>
+    </div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
