@@ -1,16 +1,21 @@
+import os
+from typing import List, Iterator
+
 import click
 from click.core import Context, Option
 
-from .entry import _click_load_entries
 from .format import DEFAULT_ENTRY_FORMAT, EntryFormat
 from .order import DEFAULT_SORT_ORDER, SortOrder
+from ..script import load_entries_from_file, load_entries_from_project
 from ...config.meta import __TITLE__, __VERSION__, __AUTHOR__, __AUTHOR_EMAIL__
+from ...model import JavaEntry
 
 
 # noinspection DuplicatedCode,PyUnusedLocal
 def print_version(ctx: Context, param: Option, value: bool) -> None:
     """
-    Print version information of cli
+    Print version information of cli.
+
     :param ctx: click context
     :param param: current parameter's metadata
     :param value: value of current parameter
@@ -25,6 +30,17 @@ def print_version(ctx: Context, param: Option, value: bool) -> None:
 CONTEXT_SETTINGS = dict(
     help_option_names=['-h', '--help']
 )
+
+
+def _click_load_entries(paths: List[str]) -> Iterator[JavaEntry]:
+    for path in paths:
+        if os.path.exists(path):
+            if os.path.isfile(path):
+                yield from load_entries_from_file(path)
+            else:
+                yield from load_entries_from_project(path)
+        else:
+            raise click.FileError(f'File not found - {repr(path)}.')  # pragma: no cover
 
 
 @click.command(context_settings=CONTEXT_SETTINGS)
@@ -45,6 +61,15 @@ CONTEXT_SETTINGS = dict(
               help="Only show the first entry.")
 @click.argument('sources', nargs=-1, type=click.types.Path(exists=True, readable=True))
 def cli(format_, sorted_by, reverse, first_only, sources):
+    """
+    CLI entry of the jentry.
+
+    :param format_: Print format of the result.
+    :param sorted_by: The sorted order of the result/
+    :param reverse: Reverse the order or not.
+    :param first_only: Only show the first entry.
+    :param sources: Source directories.
+    """
     format_ = EntryFormat.loads(format_)
     sorted_by = SortOrder.loads(sorted_by)
     reverse = not not reverse

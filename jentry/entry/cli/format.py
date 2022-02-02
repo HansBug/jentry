@@ -14,11 +14,17 @@ from ...model import JavaEntry
 @int_enum_loads(enable_int=False, name_preprocess=str.upper)
 @unique
 class EntryFormat(IntEnum):
-    TABLE = 1
-    JSON = 2
-    ENTRY = 3
+    TABLE = 1  # doc: Print in table format.
+    JSON = 2  # doc: Print in pretty JSON format.
+    ENTRY = 3  # doc: Print in simple java entry format.
 
     def print_first_entry(self, entry: JavaEntry):
+        """
+        Print the first given java entry object.
+
+        :param entry: Given java entry object.
+        :raises ValueError: Raise :class:`ValueError` when self is invalid.
+        """
         if self == EntryFormat.TABLE:
             t = PrettyTable(['Item', 'Content'])
             t.add_row(['Entry', entry.full_name])
@@ -39,6 +45,12 @@ class EntryFormat(IntEnum):
             raise ValueError(f'Unknown entry format - {repr(self)}.')  # pragma: no cover
 
     def print_entries(self, entries: List[JavaEntry]):
+        """
+        Print the given java entry objects.
+
+        :param entries: Given java entries.
+        :raises ValueError: Raise :class:`ValueError` when self is invalid.
+        """
         if self == EntryFormat.TABLE:
             t = PrettyTable(['Entry', 'Package', 'Class', 'Filename'])
             for entry in entries:
