@@ -60,7 +60,7 @@ class EntryFormat(IntEnum):
                     entry.clazz,
                     entry.filename if entry.filename else '<none>'
                 ])
-            print(click.echo(t))
+            click.echo(t)
         elif self == EntryFormat.JSON:
             click.echo(json.dumps([{
                 'entrance': entry.full_name,

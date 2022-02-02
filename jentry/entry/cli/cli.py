@@ -62,13 +62,7 @@ def _click_load_entries(paths: List[str]) -> Iterator[JavaEntry]:
 @click.argument('sources', nargs=-1, type=click.types.Path(exists=True, readable=True))
 def cli(format_, sorted_by, reverse, first_only, sources):
     """
-    CLI entry of the jentry.
-
-    :param format_: Print format of the result.
-    :param sorted_by: The sorted order of the result/
-    :param reverse: Reverse the order or not.
-    :param first_only: Only show the first entry.
-    :param sources: Source directories.
+    Jentry - find the entry of your java project.
     """
     format_ = EntryFormat.loads(format_)
     sorted_by = SortOrder.loads(sorted_by)
