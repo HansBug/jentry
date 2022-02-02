@@ -52,6 +52,7 @@ jobs:
         env:
           CI: 'true'
         run: |
+          source test_env.sh
           make unittest
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1

@@ -13,7 +13,7 @@ def print_version(ctx: Context, param: Option, value: bool) -> None:
     :param value: value of current parameter
     """
     if not value or ctx.resilient_parsing:
-        return
+        return  # pragma: no cover
     click.echo('{title}, version {version}.'.format(title=__TITLE__.capitalize(), version=__VERSION__))
     click.echo('Developed by {author}, {email}.'.format(author=__AUTHOR__, email=__AUTHOR_EMAIL__))
     ctx.exit()

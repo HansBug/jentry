@@ -1194,6 +1194,7 @@ fabric.properties
 
 /test_*
 .python-version
+/demo
 /docs/build
 /public
 /.installs
