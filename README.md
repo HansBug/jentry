@@ -149,6 +149,28 @@ Options:
 
 
 
+### Use with Python
+
+`jentry` can be imported into python
+
+```python
+from jentry.entry.script import load_entries_from_project
+
+if __name__ == '__main__':
+    for entry in load_entries_from_project('demo'):
+        print(repr(entry))
+
+```
+
+The output should be
+
+```
+<JavaEntry class: Main, filename: 'demo/2018_spring_16061104_10/src/Main.java'>
+<JavaEntry class: homework.Main, filename: 'demo/oo_course_2019_17373331_homework_2/src/homework/Main.java'>
+```
+
+
+
 
 ## License
 
