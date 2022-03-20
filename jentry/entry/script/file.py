@@ -18,7 +18,7 @@ def is_entry_method(node: Node) -> bool:
     if 'public' in node.modifiers and 'static' in node.modifiers \
             and node.name == 'main' and node.return_type is None and len(node.parameters) == 1:
         param = node.parameters[0]
-        if param.name == 'args' and param.type.name == 'String' and (
+        if param.type.name == 'String' and (
                 (not param.varargs and param.type.dimensions == [None]) or
                 (param.varargs and param.type.dimensions == [])
         ):
