@@ -7,7 +7,7 @@ Overview:
 __TITLE__ = "jentry"
 
 #: Version of this project.
-__VERSION__ = "1.0.0"
+__VERSION__ = "1.0.1"
 
 #: Short description of the project, will be included in ``setup.py``.
 __DESCRIPTION__ = 'Python CLI which can find the entry of java project.'
